@@ -19,8 +19,12 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: gradle
-        project-path: android/vision-quickstart
-
+     
+    - name: open project directory
+      working-directory: android/vision-quickstart
+      run: |
+        ls -la
+     
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
